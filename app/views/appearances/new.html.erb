@@ -1,0 +1,14 @@
+<h1>Create a New Appearance</h1>
+<%= form_tag({controller: 'appearances', action: 'create', method: 'post'}) do %>
+  <p>Episode Number:</p><br>
+  <%= number_field_tag 'episode[number]' %><br>
+  <p>Air Date:</p><br>
+  <%= date_field_tag 'episode[date]' %><br>
+  <p>Rating:</p><br>
+  <%= number_field_tag 'appearance[rating]' %><br>
+  <p>Guest Name:</p>
+  <%= text_field_tag 'guest[name]' %><br>
+  <p>Guest Occupation:</p>
+  <%= text_field_tag 'guest[occupation]' %><br>
+  <%= submit_tag "Submit" %>
+<% end %>
